@@ -11,7 +11,7 @@ export default function CTASection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-primary/90">
           Ready to Start Your Project?
         </h2>
 

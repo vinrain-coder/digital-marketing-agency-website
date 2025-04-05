@@ -4,6 +4,7 @@
 
 import Link from "next/link";
 import SocialLinks from "./shared/footer-social-links";
+import { Code } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -13,7 +14,10 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h4 className="text-2xl font-bold">DevAgency</h4>
+            <h4 className="text-2xl font-bold text-primary flex items-center gap-2">
+              <Code />
+              DevAgency
+            </h4>
             <p className="text-lg">
               Bringing your digital ideas to life. We specialize in web
               development, mobile apps, and software solutions.

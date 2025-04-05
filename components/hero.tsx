@@ -8,16 +8,6 @@ import HeroImage from "@/public/images/hero.jpg";
 export default function Hero() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-8 overflow-hidden">
-      {/* Background Gradient Lines */}
-      <div className="absolute inset-0 -z-10">
-        {/* Diagonal Gradient Lines */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-transparent to-transparent bg-opacity-30 pointer-events-none">
-          <div className="absolute top-1/4 left-[-10%] w-[300px] h-[300px] bg-gradient-to-r from-purple-600 via-indigo-400 to-orange-500 opacity-30 blur-3xl animate-pulse rotate-45" />
-          <div className="absolute bottom-1/4 right-[-10%] w-[300px] h-[300px] bg-gradient-to-l from-indigo-400 via-purple-600 to-orange-500 opacity-30 blur-3xl animate-pulse rotate-45" />
-          <div className="absolute bottom-1/4 right-[50%] w-[250px] h-[250px] bg-gradient-to-l from-indigo-400 via-orange-400 to-orange-400 opacity-30 blur-3xl rotate-45" />
-        </div>
-      </div>
-
       <div className="max-w-7xl w-full grid md:grid-cols-2 gap-6 md:gap-10 items-center z-10 py-16 md:py-24">
         {/* Text Content */}
         <div className="text-center md:text-left space-y-6">

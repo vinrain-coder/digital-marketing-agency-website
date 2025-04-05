@@ -49,14 +49,8 @@ export default function Services() {
       id="services"
       className="relative py-24 px-4 md:px-8 lg:px-16 bg-background"
     >
-      {/* Background Glow */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-gradient-to-tr from-primary/30 to-purple-500/20 blur-3xl opacity-30 rounded-full animate-pulse" />
-        <div className="absolute bottom-[10%] right-[5%] w-[300px] h-[300px] bg-gradient-to-br from-cyan-500/20 to-purple-600/10 blur-2xl opacity-20 rounded-full animate-pulse delay-200" />
-      </div>
-
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+        <h2 className="text-3xl md:text-5xl font-bold text-primary">
           Our Services
         </h2>
         <p className="text-muted-foreground mt-4 max-w-xl mx-auto">

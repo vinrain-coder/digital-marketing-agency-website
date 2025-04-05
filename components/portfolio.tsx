@@ -56,7 +56,7 @@ export default function Portfolio() {
       className="relative py-24 px-4 md:px-8 lg:px-16 bg-background"
     >
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+        <h2 className="text-3xl md:text-5xl font-bold text-primary">
           Our Portfolio
         </h2>
         <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
@@ -75,10 +75,8 @@ export default function Portfolio() {
                   src={project.image}
                   alt={project.title}
                   className="w-full object-cover rounded-t-2xl"
-                  layout="intrinsic"
                   width={640}
                   height={320}
-                  quality={100}
                 />
                 <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 rounded-t-2xl flex justify-center items-center opacity-0 hover:opacity-100 transition-all">
                   <Link

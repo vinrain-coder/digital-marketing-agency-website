@@ -39,7 +39,7 @@ export default function Values() {
       </div>
 
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+        <h2 className="text-3xl md:text-5xl font-bold text-primary">
           Our Core Values
         </h2>
         <p className="text-muted-foreground mt-4 max-w-xl mx-auto">

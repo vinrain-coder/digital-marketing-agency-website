@@ -60,7 +60,7 @@ export default function Testimonials() {
         <div className="absolute bottom-[10%] right-[5%] w-[300px] h-[300px] bg-gradient-to-br from-cyan-500/20 to-purple-600/10 blur-2xl opacity-20 rounded-full animate-pulse delay-200" />
       </div>
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+        <h2 className="text-3xl md:text-5xl font-bold text-primary">
           What Our Clients Say
         </h2>
         <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
