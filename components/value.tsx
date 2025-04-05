@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Heart, Star, Shield, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -40,14 +39,9 @@ export default function Values() {
       </div>
 
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl md:text-5xl font-bold text-foreground"
-        >
+        <h2 className="text-3xl md:text-5xl font-bold text-foreground">
           Our Core Values
-        </motion.h2>
+        </h2>
         <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
           We hold ourselves to high standards and are driven by our core values,
           which guide every project and interaction.
@@ -56,13 +50,8 @@ export default function Values() {
 
       {/* Values Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {values.map((value, index) => (
-          <motion.div
-            key={value.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-          >
+        {values.map((value) => (
+          <div key={value.title}>
             <Card className="bg-card/60 backdrop-blur-md border border-border rounded-2xl hover:shadow-xl hover:scale-[1.02] transition-all">
               <CardContent className="p-6 space-y-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mx-auto">
@@ -76,7 +65,7 @@ export default function Values() {
                 </p>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

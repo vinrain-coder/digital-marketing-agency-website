@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
@@ -57,14 +56,9 @@ export default function Portfolio() {
       className="relative py-24 px-4 md:px-8 lg:px-16 bg-background"
     >
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl md:text-5xl font-bold text-foreground"
-        >
+        <h2 className="text-3xl md:text-5xl font-bold text-foreground">
           Our Portfolio
-        </motion.h2>
+        </h2>
         <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
           Take a look at some of the best work we&apos;ve done for our clients.
           We pride ourselves on delivering top-notch results.
@@ -73,13 +67,8 @@ export default function Portfolio() {
 
       {/* Portfolio Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-          >
+        {projects.map((project) => (
+          <div key={project.title}>
             <Card className="bg-card/60 backdrop-blur-md border border-border rounded-2xl hover:shadow-xl hover:scale-[1.02] transition-all">
               <div className="relative">
                 <Image
@@ -109,7 +98,7 @@ export default function Portfolio() {
                 </p>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

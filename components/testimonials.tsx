@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
@@ -61,14 +60,9 @@ export default function Testimonials() {
         <div className="absolute bottom-[10%] right-[5%] w-[300px] h-[300px] bg-gradient-to-br from-cyan-500/20 to-purple-600/10 blur-2xl opacity-20 rounded-full animate-pulse delay-200" />
       </div>
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl md:text-5xl font-bold text-foreground"
-        >
+        <h2 className="text-3xl md:text-5xl font-bold text-foreground">
           What Our Clients Say
-        </motion.h2>
+        </h2>
         <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
           Here’s what some of our valued clients have to say about working with
           us.
@@ -77,13 +71,8 @@ export default function Testimonials() {
 
       {/* Testimonials Grid */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {testimonials.map((testimonial, index) => (
-          <motion.div
-            key={testimonial.name}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-          >
+        {testimonials.map((testimonial) => (
+          <div key={testimonial.name}>
             <Card className="bg-card/60 backdrop-blur-md border border-border rounded-2xl hover:shadow-xl hover:scale-[1.02] transition-all">
               <div className="relative">
                 <Image
@@ -108,7 +97,7 @@ export default function Testimonials() {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

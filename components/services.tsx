@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   Code,
   Smartphone,
@@ -57,14 +56,9 @@ export default function Services() {
       </div>
 
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl md:text-5xl font-bold text-foreground"
-        >
+        <h2 className="text-3xl md:text-5xl font-bold text-foreground">
           Our Services
-        </motion.h2>
+        </h2>
         <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
           We offer high-quality digital solutions designed to help your business
           grow and thrive in the digital world.
@@ -73,13 +67,8 @@ export default function Services() {
 
       {/* Services Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((service, index) => (
-          <motion.div
-            key={service.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-          >
+        {services.map((service) => (
+          <div key={service.title}>
             <Card className="bg-card/60 backdrop-blur-md border border-border rounded-2xl hover:shadow-xl hover:scale-[1.015] transition-all">
               <CardContent className="p-6 space-y-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mx-auto">
@@ -93,7 +82,7 @@ export default function Services() {
                 </p>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

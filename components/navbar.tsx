@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Code, Menu, X } from "lucide-react";
 import { ModeToggle } from "./shared/mode-toggle";
 
 const navLinks = [
@@ -27,10 +26,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
+    <header
       className={`fixed top-0 w-full z-50 transition-all ${
         scrolled
           ? "bg-background/80 backdrop-blur-md shadow-md"
@@ -39,7 +35,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold text-primary">
+        <Link
+          href="/"
+          className="flex flex-row items-center text-2xl font-bold text-primary"
+        >
+          <Code className="mr-2" />
           DevAgency
         </Link>
 
@@ -71,12 +71,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <motion.div
-          initial={{ height: 0 }}
-          animate={{ height: "auto" }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden bg-background shadow-inner"
-        >
+        <div className="md:hidden bg-background shadow-inner">
           <nav className="flex flex-col p-4 space-y-4">
             {navLinks.map((link) => (
               <Link
@@ -89,8 +84,8 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-        </motion.div>
+        </div>
       )}
-    </motion.header>
+    </header>
   );
 }

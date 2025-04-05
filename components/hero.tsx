@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import HeroImage from "@/public/images/hero.jpg";
@@ -21,12 +20,7 @@ export default function Hero() {
 
       <div className="max-w-7xl w-full grid md:grid-cols-2 gap-6 md:gap-10 items-center z-10 py-16 md:py-24">
         {/* Text Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center md:text-left space-y-6"
-        >
+        <div className="text-center md:text-left space-y-6">
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-tight">
             We{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">
@@ -54,15 +48,10 @@ export default function Hero() {
               </Button>
             </Link>
           </div>
-        </motion.div>
+        </div>
 
         {/* Hero Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex justify-center relative"
-        >
+        <div className="flex justify-center relative">
           <div className="relative w-[280px] md:w-[380px] aspect-square rounded-3xl overflow-hidden shadow-[0_0_60px_rgba(99,102,241,0.2)] border border-primary/20 backdrop-blur-lg">
             <Image
               src={HeroImage}
@@ -71,7 +60,7 @@ export default function Hero() {
               className="object-cover"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
