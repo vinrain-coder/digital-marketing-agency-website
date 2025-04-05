@@ -4,7 +4,6 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 
-// Import Nunito font with specific weights
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
